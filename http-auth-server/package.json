@@ -1,0 +1,23 @@
+{
+  "name": "ds-demo-userspecific-data",
+  "version": "1.0.0",
+  "description": "Files for the guide on user specific data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepstreamIO/ds-demo-userspecific-data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepstreamIO/ds-demo-userspecific-data/issues"
+  },
+  "homepage": "https://github.com/deepstreamIO/ds-demo-userspecific-data#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
