@@ -3,17 +3,28 @@ presence:
     allow: true
 record:
   "*":
-    create: true
-    write: true
+    create: "user.data.role === 'provider'"
+    write: "user.data.role === 'provider'"
     read: true
-    delete: true
-    listen: true
+    delete: false
+    listen: false
+  "user/$username":
+    read: "user.id === $username || user.data.role === 'provider'"
 event:
   "*":
     publish: true
     subscribe: true
     listen: true
+  "user-updates/$username":
+    publish: "user.data.role === 'provider'"
+    subscribe: "user.id === $username"
+    listen: "user.data.role === 'provider'"
 rpc:
   "*":
     provide: true
     request: true
+  "get-price":
+    #only the data provider can answer this rpc
+    provide: "user.data.role === 'provider'"
+    #make sure users send their own username
+    request: "data.username === user.id"
