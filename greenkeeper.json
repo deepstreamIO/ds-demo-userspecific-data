@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "client/package.json",
+        "data-provider/package.json",
+        "http-auth-server/package.json"
+      ]
+    }
+  }
+}
